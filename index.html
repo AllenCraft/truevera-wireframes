@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrueVera Store Wireframes</title>
+<style>
+:root{--bg:#f3f6fa;--paper:#fff;--ink:#14224a;--mute:#5d6b86;--line:#c5d0e0;--fill:#e6edf6;--fill2:#cfdbea;--accent:#4f7cac;--navy:#14224a;--note:#fff7d6;--noteline:#e2c94f}
+@media (prefers-color-scheme:dark){:root{--bg:#10151f;--paper:#1a2130;--ink:#eaf0fa;--mute:#9aa8c2;--line:#33405a;--fill:#232c3f;--fill2:#2f3b54;--accent:#7fa8d6;--navy:#eaf0fa;--note:#3a3416;--noteline:#8a7a22}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 80px}
+header.top{padding:40px 0 16px}
+h1{font-size:28px;margin:0 0 6px;font-family:Georgia,'Times New Roman',serif;font-weight:500}
+.sub{color:var(--mute);max-width:74ch;margin:0}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 8px}
+nav.toc a{padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;font-size:13px;background:var(--paper)}
+section.screen{margin-top:48px}
+section.screen>h2{font-size:21px;margin:0 0 4px;font-family:Georgia,serif;font-weight:500}
+section.screen>p.why{color:var(--mute);margin:0 0 16px;max-width:80ch}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:20px;align-items:start}
+@media(max-width:900px){.layout{grid-template-columns:1fr}}
+.frame{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.blk{border-bottom:1px dashed var(--line);padding:18px;position:relative}
+.blk:last-child{border-bottom:0}
+.tag{position:absolute;top:6px;left:8px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.ph{background:var(--fill);border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:12px;text-align:center;padding:6px}
+.bar{height:9px;background:var(--fill2);border-radius:3px;margin:6px 0}
+.bar.w40{width:40%}.bar.w60{width:60%}.bar.w80{width:80%}
+.btn{display:inline-block;background:var(--navy);color:var(--paper);padding:9px 18px;border-radius:999px;font-size:12px;font-weight:600}
+.btn.o{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.sp{justify-content:space-between}
+.grid{display:grid;gap:12px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:600px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr 1fr}}
+.announce{background:var(--navy);color:var(--paper);text-align:center;font-size:12px;padding:7px}
+.logo{font-family:Georgia,serif;font-size:19px;letter-spacing:.02em}
+.small{font-size:12px;color:var(--mute)}
+.pill{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.pill.on{border-color:var(--navy);background:var(--fill)}
+.notes{background:var(--note);border:1px solid var(--noteline);border-radius:8px;padding:14px 16px;font-size:13px;color:#2a2410}
+@media (prefers-color-scheme:dark){.notes{color:#f1e8b8}}
+.notes h3{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+.notes ol,.notes ul{margin:0;padding-left:18px}.notes li{margin-bottom:6px}
+.n{display:inline-flex;width:18px;height:18px;border-radius:50%;background:var(--accent);color:#fff;font-size:10px;font-weight:700;align-items:center;justify-content:center;position:absolute;top:6px;right:8px}
+.checks{columns:2;font-size:13px}
+@media(max-width:600px){.checks{columns:1}}
+.pdp{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+@media(max-width:700px){.pdp{grid-template-columns:1fr}}
+.drawer{width:100%;max-width:340px;margin-left:auto;border:1px solid var(--line);background:var(--paper);padding:16px;border-radius:12px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:16px;font-size:13px}
+.card h3{margin:0 0 6px;font-size:15px}
+.card ul{margin:6px 0 0;padding-left:18px}
+.tokens{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+.sw{width:84px;font-size:11px;color:var(--mute)}
+.sw i{display:block;height:44px;border-radius:8px;border:1px solid var(--line);margin-bottom:4px}
+.phones{display:flex;gap:18px;flex-wrap:wrap}
+.phone{width:210px;border:2px solid var(--ink);border-radius:26px;padding:12px 10px;background:var(--paper)}
+.phone .ph{margin:6px 0}
+table.cmp{width:100%;border-collapse:collapse;font-size:12px}
+table.cmp td,table.cmp th{border:1px solid var(--line);padding:6px 8px;text-align:left}
+table.cmp th{background:var(--fill)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>TrueVera: Store Wireframes</h1>
+  <p class="sub">Best-in-class structure for a single-hero-product skincare store: TrueVera HOCl Spray, $19.95. Informed by your two buyer personas (Kayla, 22 and Sandra, 44), your consolidated brand document, and your A+ imagery. Grey boxes are image slots, yellow notes explain why. Final visuals come in the design stage.</p>
+  <nav class="toc">
+    <a href="#bench">0 Benchmarks</a><a href="#tokens">1 Look and feel</a><a href="#global">2 Global</a><a href="#home">3 Home</a><a href="#pdp">4 Product page</a><a href="#science">5 Science</a><a href="#proof">6 Proof</a><a href="#cart">7 Cart</a><a href="#mobile">8 Mobile</a><a href="#bar">9 Quality bar</a><a href="#open">10 Open items</a>
+  </nav>
+</header>
+
+<section class="screen" id="bench">
+  <h2>0. What top Shopify skincare stores do, and what we take from it</h2>
+  <p class="why">Patterns drawn from my general knowledge of leading DTC skincare and single-product brands (I did not run live research or analytics for this). Worth a quick side-by-side review of 3 to 5 live competitor stores before design sign-off.</p>
+  <div class="frame"><div class="blk">
+    <table class="cmp">
+      <tr><th>Pattern seen in top stores</th><th>How we apply it to TrueVera</th></tr>
+      <tr><td>Product page is a full landing page: benefits, how-to, ingredients, comparison, reviews, FAQ in one scroll</td><td>PDP carries the whole story; paid traffic lands here</td></tr>
+      <tr><td>Hero shows a person and a result, not just a bottle</td><td>Real skin and a bathroom moment, product in hand</td></tr>
+      <tr><td>Ingredient transparency, "what's not in it"</td><td>"Three ingredients" panel with water, sodium chloride, HOCl 0.02%</td></tr>
+      <tr><td>Review stars near the title; photo and video reviews; filters by skin type</td><td>Reviews filterable by age and skin type to serve both personas</td></tr>
+      <tr><td>Subscribe and save plus multi-packs raise order value on low-price items</td><td>1, 2, 3-bottle options with subscription default off but visible</td></tr>
+      <tr><td>Sticky add-to-cart on mobile, express pay</td><td>Yes, on PDP and cart</td></tr>
+      <tr><td>Risk reversal near every buy button</td><td>Guarantee line at buy box, cart, and final CTA</td></tr>
+      <tr><td>Minimal navigation (4 to 6 items), education-led</td><td>Shop, How it works, Science, Reviews, FAQ</td></tr>
+    </table>
+  </div></div>
+</section>
+
+<section class="screen" id="tokens">
+  <h2>1. Look and feel (from your images)</h2>
+  <p class="why">Bright, airy, spa-clinical. Guidelines, not absolutes: refine once you decide how closely to follow the A+ art.</p>
+  <div class="frame"><div class="blk">
+    <div class="tokens">
+      <div class="sw"><i style="background:#14224a"></i>Navy headlines<br>~#14224A</div>
+      <div class="sw"><i style="background:#4f7cac"></i>Steel blue accent<br>~#4F7CAC</div>
+      <div class="sw"><i style="background:#cfe0f3"></i>Soft sky<br>~#CFE0F3</div>
+      <div class="sw"><i style="background:#eef4fb"></i>Mist background<br>~#EEF4FB</div>
+      <div class="sw"><i style="background:#2f7f78"></i>Leaf teal (logo)<br>~#2F7F78</div>
+      <div class="sw"><i style="background:#ffffff"></i>White<br>#FFFFFF</div>
+    </div>
+    <div class="grid g3">
+      <div class="card"><h3 style="font-family:Georgia,serif;font-weight:500">Headings: refined serif</h3>Garamond / Cormorant style, navy, generous size.</div>
+      <div class="card"><h3>Body: clean sans</h3>Inter or similar, 16px+, high contrast.</div>
+      <div class="card"><h3>Components</h3>Rounded cards, soft shadow, thin circle line icons, pill buttons, hairline dividers.</div>
+    </div>
+    <div class="small" style="margin-top:10px">Photography: marble bathrooms, white towels, eucalyptus, water and bubble motifs, real hands and faces. Keep one consistent light.</div>
+  </div></div>
+</section>
+
+<section class="screen" id="global">
+  <h2>2. Global header, menu and footer</h2>
+  <div class="layout">
+    <div class="frame">
+      <div class="announce">Free shipping over $35 · 30-day guarantee · Fragrance-free, alcohol-free</div>
+      <div class="blk"><span class="n">1</span>
+        <div class="row sp">
+          <div class="row"><span class="small">☰</span><span class="logo">TrueVera</span></div>
+          <div class="row small"><span>Shop</span><span>How it works</span><span>The science</span><span>Reviews</span><span>FAQ</span></div>
+          <div class="row small"><span>🔍</span><span>🛒 0</span></div>
+        </div>
+      </div>
+      <div class="blk"><span class="tag">Footer</span><span class="n">2</span>
+        <div class="grid g4" style="margin-top:14px">
+          <div><b class="small">SHOP</b><div class="small">HOCl Spray · Bundles</div></div>
+          <div><b class="small">LEARN</b><div class="small">Science · Ingredients · Safety · Uses</div></div>
+          <div><b class="small">HELP</b><div class="small">Shipping · Returns · Contact · FAQ</div></div>
+          <div><b class="small">FIND YOUR SIMPLE</b><div class="ph" style="height:30px">email · 10% off first order</div></div>
+        </div>
+        <div class="row sp small" style="margin-top:14px"><span>Social</span><span>Shop Pay · Apple Pay · PayPal · cards</span><span>© TrueVera · Made in the USA</span></div>
+      </div>
+    </div>
+    <div class="notes"><h3>Why</h3><ol>
+      <li>Short, education-led nav. Announcement bar handles risk (guarantee, shipping). Sticky header; cart opens as a drawer.</li>
+      <li>Footer repeats ingredients and safety links and carries the email capture, using the brand line "Find your simple".</li>
+    </ol></div>
+  </div>
+</section>
+
+<section class="screen" id="home">
+  <h2>3. Home page</h2>
+  <p class="why">Job: in 5 seconds, say what it does and why it's different. Then move people to the product page.</p>
+  <div class="layout">
+    <div class="frame">
+      <div class="blk" style="padding-top:26px"><span class="tag">Hero</span><span class="n">1</span>
+        <div class="grid g2">
+          <div><div style="font-family:Georgia,serif;font-size:22px">Finally. A makeup remover that leaves skin feeling clean.</div>
+            <div class="small" style="margin:6px 0 10px">Remove makeup. Refresh what's underneath. No oil. No residue. No second-guessing.</div>
+            <span class="btn">Shop the spray · $19.95</span> <span class="btn o">See how it works</span>
+            <div class="small" style="margin-top:8px">★★★★★ rating · count (once real)</div></div>
+          <div class="ph" style="height:170px">Product on marble with towel, plant and used cotton pad</div>
+        </div>
+      </div>
+      <div class="blk"><span class="tag">Trust strip</span><span class="n">2</span>
+        <div class="grid g4" style="margin-top:12px"><div class="ph">3 ingredients</div><div class="ph">Fragrance-free · alcohol-free</div><div class="ph">Made in the USA</div><div class="ph">30-day guarantee</div></div>
+      </div>
+      <div class="blk"><span class="tag">One spray, three jobs</span><span class="n">3</span>
+        <div class="grid g3" style="margin-top:12px"><div class="ph" style="height:80px">Remove makeup</div><div class="ph" style="height:80px">Clean-feeling skin</div><div class="ph" style="height:80px">Refresh anytime</div></div>
+      </div>
+      <div class="blk"><span class="tag">Why it's different: the residue problem</span><span class="n">4</span>
+        <div class="grid g2" style="margin-top:12px"><div class="ph" style="height:90px">Wipes, oils, micellar: what they leave behind (comparison table)</div><div class="ph" style="height:90px">Nano bubble tech: potency that lasts</div></div>
+      </div>
+      <div class="blk"><span class="tag">Three steps</span><span class="n">5</span>
+        <div class="grid g3" style="margin-top:12px"><div class="ph" style="height:80px">1 Spray</div><div class="ph" style="height:80px">2 Wipe or air dry</div><div class="ph" style="height:80px">3 Continue routine</div></div>
+      </div>
+      <div class="blk"><span class="tag">A dozen moments</span><span class="n">6</span>
+        <div class="grid g4" style="margin-top:12px"><div class="ph" style="height:80px">Makeup removal</div><div class="ph" style="height:80px">Post-workout</div><div class="ph" style="height:80px">Morning prep</div><div class="ph" style="height:80px">Midday reset</div></div>
+      </div>
+      <div class="blk"><span class="tag">Real people</span><span class="n">7</span>
+        <div class="grid g4" style="margin-top:12px"><div class="ph" style="height:80px">Photo review</div><div class="ph" style="height:80px">Photo review</div><div class="ph" style="height:80px">Video</div><div class="ph" style="height:80px">Quote</div></div>
+      </div>
+      <div class="blk"><span class="tag">Brand story + FAQ + final CTA</span><span class="n">8</span>
+        <div class="ph" style="height:70px;margin-top:10px">"Healthy skin starts simple" · top 5 FAQs · guarantee · Add to cart</div>
+      </div>
+    </div>
+    <div class="notes"><h3>Why</h3><ol>
+      <li>Headline taken from your strongest A+ line. Hero shows the used pad (visible proof).</li>
+      <li>Trust before scrolling, answers "what's in it, what's the catch".</li>
+      <li>Your "One spray. Three jobs" framing, clear and quick.</li>
+      <li>Addresses "why is it better" with a real comparison; replace the single-column chart with competitors.</li>
+      <li>Reinforces simplicity (the brand's core promise).</li>
+      <li>Use cases widen the reasons to buy beyond makeup removal.</li>
+      <li>Placeholder until real, unedited reviews exist. Don't launch with fake or stock proof.</li>
+      <li>Brand story kept short and lower down; the buyer wants proof first.</li>
+    </ol></div>
+  </div>
+</section>
+
+<section class="screen" id="pdp">
+  <h2>4. Product page: the page that sells</h2>
+  <div class="layout">
+    <div class="frame">
+      <div class="blk"><span class="n">1</span>
+        <div class="pdp">
+          <div><div class="ph" style="height:240px">Hero image · swipe gallery: bottle, texture, in use, lifestyle, ingredient card</div>
+            <div class="grid g4" style="margin-top:8px"><div class="ph" style="height:50px">Bottle</div><div class="ph" style="height:50px">In use</div><div class="ph" style="height:50px">Gym bag</div><div class="ph" style="height:50px">▶ 20s demo</div></div></div>
+          <div>
+            <b style="font-family:Georgia,serif;font-size:20px;font-weight:500">TrueVera HOCl Spray</b>
+            <div class="small">Makeup remover and skin refresh · 8 fl oz (240 mL)</div>
+            <div class="small">★★★★★ (reviews)</div>
+            <div style="font-size:20px;font-weight:700;margin:6px 0">$19.95</div>
+            <div class="row" style="margin:4px 0"><span class="pill on">1 bottle</span><span class="pill">2 bottles</span><span class="pill">3 bottles</span></div>
+            <div class="small" style="margin:6px 0">☐ Subscribe and save (delivery every 1 / 2 / 3 months)</div>
+            <div style="margin:10px 0"><span class="btn" style="display:block;text-align:center">Add to cart</span></div>
+            <div class="small">Spray · wipe · done. No rinsing.</div>
+            <div class="small">✓ Fragrance-free ✓ Alcohol-free ✓ 30-day guarantee</div>
+            <div class="ph" style="height:28px;margin-top:8px">Shop Pay · Apple Pay buttons</div>
+            <div class="small" style="margin-top:6px">Ships in X days</div>
+          </div>
+        </div>
+      </div>
+      <div class="blk"><span class="n">2</span><span class="tag">Benefit icons</span><div class="grid g4" style="margin-top:12px"><div class="ph" style="height:50px">No oily residue</div><div class="ph" style="height:50px">No fragrance</div><div class="ph" style="height:50px">No alcohol</div><div class="ph" style="height:50px">Face and body</div></div></div>
+      <div class="blk"><span class="n">3</span><span class="tag">What's inside</span><div class="ph" style="height:60px;margin-top:10px">Water · sodium chloride · hypochlorous acid 0.02% · full ingredient list · what's not in it</div></div>
+      <div class="blk"><span class="n">4</span><span class="tag">How to use</span><div class="grid g3" style="margin-top:12px"><div class="ph" style="height:60px">Spray</div><div class="ph" style="height:60px">Wipe</div><div class="ph" style="height:60px">Continue routine</div></div></div>
+      <div class="blk"><span class="n">5</span><span class="tag">Formulated for stability</span><div class="ph" style="height:70px;margin-top:10px">Nano bubble technology explainer, diagram (claims substantiated)</div></div>
+      <div class="blk"><span class="n">6</span><span class="tag">Compare</span><div class="ph" style="height:80px;margin-top:10px">TrueVera vs wipes, micellar water, oil cleansers, other HOCl sprays</div></div>
+      <div class="blk"><span class="n">7</span><span class="tag">Reviews with photos</span><div class="grid g2" style="margin-top:12px"><div class="ph" style="height:60px">Rating breakdown · filter skin type / age</div><div class="ph" style="height:60px">Review cards</div></div></div>
+      <div class="blk"><span class="n">8</span><span class="tag">FAQ</span><div class="ph" style="height:50px;margin-top:10px">Is it safe? Sensitive skin? How long does it last? How is it different?</div></div>
+      <div class="blk"><span class="n">9</span><span class="tag">Pairs well with</span><div class="grid g3" style="margin-top:12px"><div class="ph" style="height:50px">Reusable pads</div><div class="ph" style="height:50px">Gym-bag / mini size (future)</div><div class="ph" style="height:50px">Bundle</div></div></div>
+    </div>
+    <div class="notes"><h3>Why</h3><ol>
+      <li>Buy box: price, bundle picker, subscription, guarantee, express pay. Sticky Add to cart on mobile. Gallery order: use moment first, bottle second.</li>
+      <li>Fast scan of the four "no" claims buyers look for.</li>
+      <li>Ingredient transparency is the trust anchor for Sandra.</li>
+      <li>Reduces the "another routine" fear.</li>
+      <li>Your key differentiator; keep claims supportable.</li>
+      <li>Replace "No stripping/No oil" generalities with a table naming real alternatives.</li>
+      <li>Skin-type filters let both personas find peers.</li>
+      <li>Answers the five objections in one place.</li>
+      <li>Light cross-sell to raise order value; only add once you have these products.</li>
+    </ol></div>
+  </div>
+</section>
+
+<section class="screen" id="science">
+  <h2>5. The science page</h2>
+  <p class="why">Turns "heard it before" into "oh, that's different". Plain language first, depth for researchers like Sandra.</p>
+  <div class="frame">
+    <div class="blk"><span class="n">1</span><div class="ph" style="height:60px">"Why clean isn't the same as makeup-free" · what HOCl is · why the body makes it too</div></div>
+    <div class="blk"><span class="n">2</span><div class="grid g3"><div class="ph" style="height:90px">Diagram: residue left by wipes and oils</div><div class="ph" style="height:90px">Diagram: what HOCl does</div><div class="ph" style="height:90px">Diagram: nano bubbles keep it stable</div></div></div>
+    <div class="blk"><span class="n">3</span><div class="grid g3"><div class="ph" style="height:60px">Safety and testing</div><div class="ph" style="height:60px">Sources and citations</div><div class="ph" style="height:60px">Manufacturing facts (worded carefully)</div></div></div>
+    <div class="blk"><span class="n">4</span><div class="row" style="justify-content:center"><span class="btn">Try it risk-free</span></div></div>
+  </div>
+  <div class="notes" style="margin-top:12px"><h3>Why</h3><ol>
+    <li>Dedicated page keeps the PDP lighter and gives SEO and ads a landing page for "what is hypochlorous acid".</li>
+    <li>Every claim needs a source; keep comparative claims about other brands out until substantiated.</li>
+  </ol></div>
+</section>
+
+<section class="screen" id="proof">
+  <h2>6. Reviews and proof</h2>
+  <div class="frame">
+    <div class="blk"><span class="n">1</span><div class="row sp"><b>★ average · count</b><span class="pill">Skin type ▾</span><span class="pill">Age ▾</span><span class="pill">With photos</span></div></div>
+    <div class="blk"><span class="n">2</span><div class="grid g4"><div class="ph" style="height:90px">Raw photo + quote</div><div class="ph" style="height:90px">Raw photo + quote</div><div class="ph" style="height:90px">Video review</div><div class="ph" style="height:90px">Raw photo + quote</div></div></div>
+    <div class="blk"><span class="n">3</span><div class="ph" style="height:50px">"Verified buyer" · how reviews are collected · no incentivized-review spin</div></div>
+  </div>
+  <div class="notes" style="margin-top:12px"><h3>Why</h3><ol>
+    <li>Your personas distrust staged before/afters and influencer posts. Unedited, specific, filterable proof beats polish.</li>
+    <li>Post-purchase email at day 14 asks for photos. Start collecting before launch ads.</li>
+  </ol></div>
+</section>
+
+<section class="screen" id="cart">
+  <h2>7. Cart and checkout</h2>
+  <div class="layout">
+    <div class="frame"><div class="blk">
+      <div class="drawer">
+        <div class="row sp"><b>Your cart (1)</b><span>✕</span></div>
+        <div class="bar w80" style="height:12px;margin-top:10px"></div>
+        <div class="small">Add $15.05 more for free shipping</div>
+        <div class="row" style="margin:12px 0"><div class="ph" style="width:60px;height:70px"></div><div><b class="small">HOCl Spray 8 oz</b><div class="small">− 1 +</div></div><b>$19.95</b></div>
+        <div class="ph" style="height:50px">Upgrade to 2-pack and save · or subscribe and save</div>
+        <div class="row sp" style="margin:10px 0"><span>Subtotal</span><b>$19.95</b></div>
+        <span class="btn" style="display:block;text-align:center">Checkout</span>
+        <div class="small" style="margin-top:6px;text-align:center">30-day guarantee · Shop Pay · Apple Pay · PayPal</div>
+      </div>
+    </div></div>
+    <div class="notes"><h3>Why</h3><ol>
+      <li>Free-shipping bar and a multi-pack nudge lift order value without a pushy upsell.</li>
+      <li>Checkout in brand colors and logo. Confirmation page: how to use, what to expect, review request after 2 weeks.</li>
+    </ol></div>
+  </div>
+</section>
+
+<section class="screen" id="mobile">
+  <h2>8. Mobile first</h2>
+  <p class="why">Both personas live on their phones. Design this view first.</p>
+  <div class="phones">
+    <div class="phone"><div class="small">Home</div><div class="announce" style="font-size:9px">Free shipping $35+</div>
+      <div class="row sp"><span>☰</span><span class="logo" style="font-size:15px">TrueVera</span><span>🛒</span></div>
+      <div class="ph" style="height:150px">Hero image</div><div class="bar w80"></div><span class="btn">Shop · $19.95</span>
+      <div class="ph" style="height:36px">Trust strip (swipe)</div><div class="ph" style="height:70px">3 jobs</div><div class="ph" style="height:70px">Compare</div><div class="ph" style="height:50px">Reviews</div></div>
+    <div class="phone"><div class="small">Product</div>
+      <div class="ph" style="height:170px">Swipe gallery · dots</div><div class="bar w60"></div><div class="small">★★★★★ · $19.95</div>
+      <div class="row"><span class="pill on">1</span><span class="pill">2</span><span class="pill">3</span></div>
+      <div class="ph" style="height:30px">Ingredients ▾</div><div class="ph" style="height:30px">How to use ▾</div><div class="ph" style="height:30px">FAQ ▾</div>
+      <div class="btn" style="display:block;text-align:center;margin-top:8px">Add to cart · $19.95</div><div class="small" style="text-align:center">sticky bar</div></div>
+    <div class="phone"><div class="small">Cart</div><div class="small">Free shipping bar</div><div class="ph" style="height:60px">Item</div><div class="ph" style="height:40px">2-pack upgrade</div>
+      <div class="btn" style="display:block;text-align:center">Checkout</div><div class="ph" style="height:28px">Apple Pay</div><div class="small" style="text-align:center">Guarantee</div></div>
+  </div>
+  <div class="notes" style="margin-top:12px"><h3>Rules</h3><ul class="checks"><li>Sticky Add to cart</li><li>Tap targets 44px+</li><li>Accordions for depth</li><li>Swipeable gallery</li><li>Apple Pay / Google Pay</li><li>Short paragraphs, big type</li></ul></div>
+</section>
+
+<section class="screen" id="bar">
+  <h2>9. Quality bar for "world class"</h2>
+  <div class="notes"><h3>Non-negotiables</h3>
+    <ul class="checks">
+      <li>Mobile LCP under 2.5s; images optimized, banners rebuilt as live text</li>
+      <li>Accessibility: WCAG AA contrast (pale blue on white needs checking)</li>
+      <li>Product and review schema; stars in search</li>
+      <li>Photo/video reviews app; subscriptions app</li>
+      <li>Email and SMS: welcome, abandoned cart, post-purchase, replenishment</li>
+      <li>Meta, TikTok, Google pixels verified</li>
+      <li>Policy pages: shipping, returns, privacy, terms, ingredient and safety</li>
+      <li>Consistent tokens: one palette, two fonts</li>
+    </ul>
+  </div>
+</section>
+
+<section class="screen" id="open">
+  <h2>10. Open items to settle before design</h2>
+  <div class="notes"><h3>Decisions and fixes</h3>
+    <ol>
+      <li>Fix "HOCI" to "HOCl" in the banners, or rebuild them as live text.</li>
+      <li>Live Shopify description already softened (stability, competitor and eye claims). Still to fix in the banners and Word doc: "stable for months", "day 1 = day 90", "dirty secret of the industry", "calms redness and irritation", and the EPA/FDA facility wording.</li>
+      <li>Set inventory (currently 0) and confirm real shipping threshold, guarantee, and price tiers; the $35, 30-day and multi-pack discounts here are placeholders.</li>
+      <li>Decide how much to speak to Kayla (breakouts, pores). Current copy is Sandra-leaning. Avoid acne treatment claims.</li>
+      <li>Start collecting real, unedited reviews and photos now.</li>
+      <li>Decide: Shopify theme as the base (e.g. a flexible free or paid theme) vs fully custom sections.</li>
+    </ol>
+  </div>
+</section>
+
+</div>
+</body>
+</html>
